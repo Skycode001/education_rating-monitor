@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мониторинг поступающих</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>📊 Мониторинг поступающих</h1>
+                <p id="last-update">Обновление: загрузка...</p>
+                <p id="data-status" style="font-size: 12px; color: #666;"></p>
+            </div>
+            <div>
+                <button id="refresh-btn" onclick="refreshData()">🔄 Обновить</button>
+            </div>
+        </header>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Всего подавших</h3>
+                <p class="number" id="total">-</p>
+                <span class="change" id="total-change"></span>
+            </div>
+            <div class="card">
+                <h3>Приоритет 1</h3>
+                <p class="number" id="priority-1">-</p>
+            </div>
+            <div class="card">
+                <h3>Документы поданы</h3>
+                <p class="number" id="docs-submitted">-</p>
+            </div>
+            <div class="card">
+                <h3>Без приоритета</h3>
+                <p class="number" id="without-priority">-</p>
+            </div>
+            <!-- НОВАЯ КАРТОЧКА: Изменение с прошлого обновления -->
+            <div class="card" id="change-card">
+                <h3>📈 Изменение с прошлого обновления</h3>
+                <p class="number" id="change-display">-</p>
+                <span class="change" id="change-details"></span>
+            </div>
+        </div>
+
+        <div id="chart"></div>
+
+        <footer>
+            <p>📌 Данные обновляются при запуске или нажатии кнопки</p>
+            <p><small>Источник: <a href="указать!!!" target="_blank">org.mephi.ru</a></small></p>
+            <p><small>⚙️ Настройки в файле <code>.env</code></small></p>
+        </footer>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

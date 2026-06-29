@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables - ВАЖНО!
+.env
+.env.local
+.env.*.local
+
+# Data
+data/cache/*.json
+data/cache/*.csv
+*.db
+*.sqlite3
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Security
+*.pem
+*.key
+*.crt
+
+# ============================================
+# ОТЛАДОЧНЫЕ И ТЕСТОВЫЕ ФАЙЛЫ
+# ============================================
+
+# Отладочные скрипты
+debug_parser.py
+debug_parser_v2.py
+test_api.py
+
+# Временные файлы
+*.tmp
+*.temp
+debug_*.log
